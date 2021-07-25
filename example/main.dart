@@ -8,7 +8,7 @@ void main() {
   final Humidity demoHumid = Humidity(75);
 
   // Print result: {temperature: 25.5°C, humidity: 75%}
-  print({"temperature", demoTemp.toString(), "humidity", demoHumid.toString()});
+  print({"temperature": demoTemp.toString(), "humidity": demoHumid.toString()});
 
   // Convert to Fahrenheit
   print(demoTemp.toString() +
