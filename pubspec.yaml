@@ -1,0 +1,6 @@
+name: weather_unit
+description: Providing weather unit in Dart
+environment: 
+  sdk: ">=2.10.0"
+dev_dependencies:
+  test: ^1.17.10
