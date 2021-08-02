@@ -1,8 +1,8 @@
 name: weather_unit
 description: Providing weather unit in Dart with display, compare and convert unit.
 homepage: https://www.rk0cc.xyz
-repository: https://github.com/Weanel/weather_unit
-version: 1.0.1
+repository: https://github.com/rk0cc/weather_unit
+version: 1.0.1+1
 environment: 
   sdk: ">=2.12.0 <3.0.0"
 dev_dependencies:
