@@ -7,29 +7,20 @@ part './fahrenheit.dart';
 final double absoluteZeroC = -273.15;
 
 /// [Temperature] is a unit for expressiong hot and cold
-abstract class Temperature with UnitComparable, UnitSymbol {
-  /// [Tempurture]'s value with declared unit
-  double _value;
-
-  /// Tempurture's [symbol] which used for display
-  String get symbol;
-
+abstract class Temperature extends WeatherUnit implements UnitComparable {
   /// Assign [Tempurture] [value]
   ///
   /// Throws [ArgumentError] if [value] lower than [absoluteZeroC] in [Celsius]
-  Temperature(double value) : _value = value {
-    double valInC = _value;
+  Temperature(double value) : super(value) {
+    double valInC = this.value;
     if (this is Fahrenheit) {
       valInC = (this as Fahrenheit).toCelsius.value;
     }
     if (valInC < absoluteZeroC) {
-      throw new ArgumentError.value(_value, "value",
+      throw new ArgumentError.value(this.value, "value",
           "The tempurture should not lower than absolute zero (-273.15°C)");
     }
   }
-
-  /// Get completed [value] of [Temperature]
-  double get value => _value;
 
   bool _comparsion(
       Object compare, bool Function(Temperature compareTemp) compareMethod) {
@@ -42,7 +33,7 @@ abstract class Temperature with UnitComparable, UnitSymbol {
 
   /// Export fixed [double] [String] with [fractionDigits]
   String toFixedDoubleStringValue(int fractionDigits) =>
-      _value.toStringAsFixed(fractionDigits);
+      value.toStringAsFixed(fractionDigits);
 
   /// Export from [toFixedString] then invoke [double.parse].
   /// Therefore, it is impossible to invoke [FormatException]
@@ -51,7 +42,7 @@ abstract class Temperature with UnitComparable, UnitSymbol {
 
   /// Convert to [String] for displaying [Tempurture] data
   @override
-  String toString() => toFixedDoubleStringValue(1) + symbol;
+  String toString() => toFixedDoubleStringValue(1) + (this.symbol ?? "°");
 
   /// Compare this tempurture is the same with [compare]
   ///

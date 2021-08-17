@@ -15,9 +15,9 @@ class Fahrenheit extends Temperature {
   String get symbol => "°F";
 
   /// Convert to [Celsius]
-  Celsius get toCelsius => Celsius((_value - 32) * (5 / 9));
+  Celsius get toCelsius => Celsius((this.value - 32) * (5 / 9));
 
-  double _valueFromCelsius(Celsius celsius) => celsius.toFahrenheit._value;
+  double _valueFromCelsius(Celsius celsius) => celsius.toFahrenheit.value;
 
   @override
   // ignore: hash_and_equals
