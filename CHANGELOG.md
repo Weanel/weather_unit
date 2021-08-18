@@ -1,5 +1,6 @@
 # 1.1.1
 * Allows parse integer directly to `Temperature` and `Humidity`
+* Added missed documentation
 
 # 1.1.0
 * Drop `Humidity` comparable
