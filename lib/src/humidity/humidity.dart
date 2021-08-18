@@ -1,5 +1,8 @@
 import '../unit_standard.dart';
 
+/// [Humidity] is the water vapour in the air
+///
+/// This unit is can not be comparable
 class Humidity extends WeatherUnit {
   /// Assign [Humidity]'s percentage as [value]
   ///

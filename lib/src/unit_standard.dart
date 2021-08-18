@@ -1,10 +1,14 @@
+/// Standard interface of [WeatherUnit]
 abstract class WeatherUnit {
-  late double _value;
+  double _value;
 
+  /// Create new data of [WeatherUnit]
   WeatherUnit(num value) : _value = value.toDouble();
 
+  /// Actual value of this [WeatherUnit]
   double get value => _value;
 
+  /// Symbol of [WeatherUnit]
   String? get symbol;
 }
 
