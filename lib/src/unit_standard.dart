@@ -29,6 +29,8 @@ mixin UnitComparable {
   bool operator <=(Object compare);
 }
 
+/// Mark [UnitUncomparable] to disallow comparing functiion
+/// which throws [TypeError] if did it
 mixin UnitUncomparable {
   bool operator ==(Object compare) {
     throw new TypeError();
