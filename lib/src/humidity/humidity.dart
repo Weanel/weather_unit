@@ -3,7 +3,7 @@ import '../unit_standard.dart';
 /// [Humidity] is the water vapour in the air
 ///
 /// This unit is can not be comparable
-class Humidity extends WeatherUnit {
+class Humidity extends WeatherUnit with UnitUncomparable {
   /// Assign [Humidity]'s percentage as [value]
   ///
   /// Throws [ArgumentError] if [value] is lower than 0 or higher than 100

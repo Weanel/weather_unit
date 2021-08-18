@@ -1,3 +1,6 @@
+# 1.1.2
+* Add `UnitUncomparable`
+
 # 1.1.1
 * Allows parse integer directly to `Temperature` and `Humidity`
 * Added missed documentation

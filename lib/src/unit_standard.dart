@@ -15,7 +15,7 @@ abstract class WeatherUnit {
 /// Mark [UnitComparable] allowing the unit uses operator with same sub-class
 ///
 /// P.S. [==] is inherited from [Object]
-abstract class UnitComparable {
+mixin UnitComparable {
   /// When [this] object's value is larger of [compare]
   bool operator >(Object compare);
 
@@ -27,4 +27,26 @@ abstract class UnitComparable {
 
   /// When [this] object's value is smaller or equal than [compare]
   bool operator <=(Object compare);
+}
+
+mixin UnitUncomparable {
+  bool operator ==(Object compare) {
+    throw new TypeError();
+  }
+
+  bool operator >(Object compare) {
+    throw new TypeError();
+  }
+
+  bool operator <(Object compare) {
+    throw new TypeError();
+  }
+
+  bool operator >=(Object compare) {
+    throw new TypeError();
+  }
+
+  bool operator <=(Object compare) {
+    throw new TypeError();
+  }
 }

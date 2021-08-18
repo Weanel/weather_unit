@@ -7,7 +7,7 @@ part './fahrenheit.dart';
 final double absoluteZeroC = -273.15;
 
 /// [Temperature] is a unit for expressiong hot and cold
-abstract class Temperature extends WeatherUnit implements UnitComparable {
+abstract class Temperature extends WeatherUnit with UnitComparable {
   /// Assign [Tempurture] [value]
   ///
   /// Throws [ArgumentError] if [value] lower than [absoluteZeroC] in [Celsius]
