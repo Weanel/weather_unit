@@ -1,7 +1,7 @@
 abstract class WeatherUnit {
-  double _value;
+  late double _value;
 
-  WeatherUnit(double value) : _value = value;
+  WeatherUnit(num value) : _value = value.toDouble();
 
   double get value => _value;
 

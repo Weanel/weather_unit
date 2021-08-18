@@ -11,7 +11,7 @@ abstract class Temperature extends WeatherUnit implements UnitComparable {
   /// Assign [Tempurture] [value]
   ///
   /// Throws [ArgumentError] if [value] lower than [absoluteZeroC] in [Celsius]
-  Temperature(double value) : super(value) {
+  Temperature(num value) : super(value) {
     double valInC = this.value;
     if (this is Fahrenheit) {
       valInC = (this as Fahrenheit).toCelsius.value;

@@ -4,7 +4,7 @@ class Humidity extends WeatherUnit {
   /// Assign [Humidity]'s percentage as [value]
   ///
   /// Throws [ArgumentError] if [value] is lower than 0 or higher than 100
-  Humidity(double value) : super(value) {
+  Humidity(num value) : super(value) {
     if (value > 100 || value < 0) {
       throw new ArgumentError.value(
           value, "value", "Humid should between 0 - 100%");

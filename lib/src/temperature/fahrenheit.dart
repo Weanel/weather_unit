@@ -9,7 +9,7 @@ part of 'temperature.dart';
 /// * Human normal temperature: 99.5°F
 class Fahrenheit extends Temperature {
   /// Assign [Fahrenheit] [value]
-  Fahrenheit(double value) : super(value);
+  Fahrenheit(num value) : super(value);
 
   @override
   String get symbol => "°F";

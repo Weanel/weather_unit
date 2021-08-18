@@ -9,7 +9,7 @@ part of 'temperature.dart';
 /// * Human normal temperature: 37.5°C
 class Celsius extends Temperature {
   /// Assign [Celsius] [value]
-  Celsius(double value) : super(value);
+  Celsius(num value) : super(value);
 
   @override
   String get symbol => "°C";
