@@ -1,3 +1,6 @@
+# 1.1.2+1
+* Become a part of weanel project again
+
 # 1.1.2
 * Add `UnitUncomparable`
 
